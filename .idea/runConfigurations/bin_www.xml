@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="bin/www" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="/usr/local/bin/node" path-to-js-file="$USER_HOME$/Lab/node/recipeApp/bin/www" working-dir="$USER_HOME$/Lab/node/recipeApp">
+    <envs>
+      <env name="DEBUG" value="firstapp:*" />
+    </envs>
+    <browser url="http://localhost:3000/" />
+    <method />
+  </configuration>
+</component>
