@@ -1,17 +1,46 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Recipes</title>
+    <link rel='stylesheet' href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css' />
     <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <div id="main">
+</head>
+<body>
+<div id="main">
     <h1>My Git Recipes</h1>
     <p>Welcome to My Git Recipes</p>
-    <ul id="recipes" class="recipes-title">
-    </ul>
+    <div id="inner-container">
+        <span id="add" class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        <ul id="recipes" class="recipes-title">
+        </ul>
     </div>
-  </body>
+    <div id="add-recipe">
+        <form>
+            <p> <label for="recipe-name">Recipe Name:</label> <input type="text" name="recipe-name" id="recipe-name"></select></p>
+            <p> <label for="recipe-machine-name">Recipe Machine Name:</label> <input type="text" name="recipe-machine-name" id="recipe-machine-name"></select></p>
+            <div id="ingredients">
+                <ul>
+                    <div id="ingredient-lines">
+                    <div class="line">
+                    <label for="ingred-amount">Ingredient Amount:</label> <input type="text" name="ingred-amount" id="ingred-amount0"></select>
+                        <label for="ingred-um">Ingredient UM:</label> <select type="text" name="ingred-um" id="ingred-um0">
+                            <option value="cup">Cup(s)</option>
+                            <option value="tbls">Tbls</option>
+                            <option value="tsp">Tsp</option>
+                        </select>
+                        <label for="ingred-name1">Ingredient Name:</label> <input type="text" name="ingred-name" id="ingred-name0"></select>
+                        </div>
+                        <span id="add-ingred" class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                    </div>
+                </ul>
+            </div>
+            <p> <label for="recipe-description">Recipe Description:</label><textarea class="form-control" rows="6" name="recipe-description" id="recipe-description"></textarea></p>
+            <button type="button" value="submit" id="recipe-submit" class="btn btn-primary">Submit Recipe</button>
+            <button type="button" value="submit" id="recipe-cancel" class="btn btn-danger">Cancel</button>
+        </form>
+    </div>
+</div>
+</body>
 <script src="/javascripts/jquery/dist/jquery.js"></script>
 <script src="/javascripts/main.js"></script>
 </html>

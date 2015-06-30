@@ -23,6 +23,11 @@ a {
   width: 290px;
 }
 
+#inner-container {
+  width: 355px;
+  display: block;
+}
+
 #recipes > li {
 
   background-color: #76BBBB;
@@ -34,4 +39,20 @@ a {
 
 #recipes li {
   list-style-type: none;
+}
+
+#add {
+  float: right;
+  position: relative;
+  margin-right: 22px;
+  margin-top: -19px;
+
+}
+
+#add-recipe {
+  display: none;
+}
+
+#recipe-description {
+    width: 800px;
 }
