@@ -37,22 +37,23 @@ $(document).ready(function() {
 $("#recipe-submit").on('click', function() {
     $("#add-recipe").toggle();
     $("#inner-container").fadeToggle();
-    var ingred = [];
+    var ingred = {};
     for(var j=0;j<i;j++){
 
-        ingred[j] = [];
+        ingred[j] = {};
         ingred[j]['amount'] = $("#ingred-amount"+j).val();
         ingred[j]['um'] = $("#ingred-um"+j).val();
         ingred[j]['ingredient'] = $("#ingred-name"+j).val();
     }
-    
+    var ingred_send = JSON.stringify(ingred);
+    console.log(ingred);
     $.ajax({
         type: "POST",
         url: '/recipes/add',
         data: {
             name: $("#recipe-name").val(),
             machine_name: $("#recipe-machine-name").val(),
-            ingredients: ingred,
+            ingredients: ingred_send,
             directions: $("#recipe-description").val()
         },
         success: function(d) {
